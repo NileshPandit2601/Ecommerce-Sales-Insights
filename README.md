@@ -1,77 +1,62 @@
-Ecommerce Sales Analysis Project
+# Ecommerce Sales Analysis Project
 
-Project Overview
+## Project Overview
 
-This project focuses on analyzing ecommerce sales data to uncover meaningful business insights. We used SQL for querying and Python for visualization and data storytelling. The goal is to understand customer behavior, product performance, and time-based trends.
+Analyze ecommerce sales data to uncover business insights using SQL and Python. The project focuses on identifying top products, customer behavior, time-based trends, and operational anomalies.
 
-Tools Used
+## Tools Used
 
-MySQL for querying data
+* **MySQL**: Data querying
+* **Python**: `pandas`, `matplotlib`, `seaborn`
+* **Jupyter Notebook**: Interactive analysis
 
-Python libraries including pandas, matplotlib, and seaborn
+##  Key Insights
 
-Jupyter Notebook for exploratory analysis and plotting
+### SQL Analysis
 
-Key Analyses and Visualizations
+* Customers with more than 5 orders and spend > ₹10,000
+* Top 5 revenue-generating products
+* Month with the highest number of orders
+* Product with the highest return rate
+* Day of the week with highest average sales volume
+* Products with unusually high quantity sold in a single order
 
-SQL Insights:
+### Advanced SQL
 
-Identified customers who placed more than five orders and spent over 10,000
+* **CTEs**: Monthly revenue trend
+* **Window Functions**: Product ranking using `RANK()`
+* **Subqueries & Joins**: Customer cohort analysis and category comparisons
 
-Found the top five revenue-generating products
+### Python Visualizations
 
-Determined the month with the highest number of orders
+* Bar chart: Quantity sold by product and category
+* Line chart: Monthly revenue trend
+* Bar + line overlay: Top products with return rates
+* Bar chart: Return count for every product
 
-Highlighted the product with the highest return rate
+## Project Structure
 
-Identified the day of the week with the highest average sales volume
+```text
+├── sales.sql                          # SQL queries for insights and trends
+├── Build Week2.ipynb                  # Jupyter Notebook with Python analysis
+├── ER Diagram to 3NF                  
+```
 
-Detected products with unusually high quantities in a single order to flag potential fraud
+##  How to Run
 
-Advanced SQL Techniques:
+1. Import dataset into MySQL and name the table `ecommerce`
+2. Run SQL queries from `sales.sql` using MySQL Workbench or similar
+3. Open `Build Week2.ipynb` in Jupyter Notebook
+4. Install dependencies:
 
-Used common table expressions (CTEs) to calculate monthly revenue trends
+   ```bash
+   pip install pandas matplotlib seaborn
+   ```
+5. Run each notebook cell to view insights and plots
 
-Applied window functions like RANK to rank products by revenue
+##  Outcomes
 
-Performed customer cohort analysis by tracking cumulative monthly spend
+* Identified high-value customers and products
+* Visualized sales patterns by time and category
+* Flagged anomalies and return-heavy products
 
-Compared product-level revenue with average category revenue using subqueries and joins
-
-Python Visualizations:
-
-Bar charts showing quantity sold by product and category
-
-Line chart for monthly revenue trends
-
-Combination of bar and line chart to show top products with return rate overlay
-
-Bar chart displaying return counts for each product
-
-File Structure
-
-sales.sql: Contains all SQL queries used in the project
-
-Build Week2.ipynb: Jupyter Notebook with Python analysis and visualizations
-
-Ecommerce_Data_Storytelling_Presentation.pptx: Presentation summarizing insights
-
-How to Run This Project
-
-Load your dataset into a MySQL database and name the table 'ecommerce'
-
-Run the SQL queries in MySQL Workbench or another SQL IDE
-
-Open the Jupyter Notebook file 'Build Week2.ipynb'
-
-Make sure you have installed the required Python libraries: pandas, matplotlib, and seaborn
-
-Run the notebook cells to generate insights and visualizations
-
-Outcomes
-
-Identified valuable customers and high-performing products
-
-Gained insights into how sales vary over time and by category
-
-Detected anomalies such as excessive returns and potential fraud
